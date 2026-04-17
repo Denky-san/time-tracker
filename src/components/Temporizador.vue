@@ -3,12 +3,23 @@ import { ref } from 'vue';
 import Cronometro from './Cronometro.vue';
 import Botao from './Botao.vue';
 
+let props = defineProps({
+    podeIniciar: {
+        type: Boolean,
+        default: true
+    }
+});
+
 let tempoEmSegundos = ref(0);
 let cronometro = ref(0);
 let cronometroRodando = ref(false);
-const emit = defineEmits(['tempoFinalizado']);
+const emit = defineEmits(['tempoFinalizado', 'tentativaInicioInvalida']);
 
 function iniciar() {
+    if (!props.podeIniciar) {
+        emit('tentativaInicioInvalida');
+        return;
+    }
     if (!cronometroRodando.value) {
         cronometro.value = setInterval(() => {
             tempoEmSegundos.value++;

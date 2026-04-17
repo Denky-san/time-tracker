@@ -2,7 +2,6 @@
 let props = defineProps({
     tempoEmSegundos: {
         type: Number,
-        required: true,
         default: 0
     }
 })
