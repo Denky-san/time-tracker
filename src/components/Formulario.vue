@@ -19,27 +19,24 @@ function finalizarTarefa(tempoEmSegundos: number) {
 </script>
 
 <template>
-    <div class="box">
+    <div class="box formulario">
         <div class="columns">
             <form class="column is-8" aria-label="Formulário para criação de uma nova tarefa">
-                <input
-                    type="text"
-                    class="input"
-                    :class="{ 'is-danger': campoInvalido }"
-                    placeholder="Qual tarefa você quer criar?"
-                    v-model="tarefa"
-                    @input="campoInvalido = false"
-                    required
-                >
+                <input type="text" class="input" :class="{ 'is-danger': campoInvalido }"
+                    placeholder="Qual tarefa você quer criar?" v-model="tarefa" @input="campoInvalido = false" required>
             </form>
 
             <div class="column">
-                <Temporizador
-                    :pode-iniciar="tarefa.trim().length > 0"
-                    @tempo-finalizado="finalizarTarefa"
-                    @tentativa-inicio-invalida="campoInvalido = true"
-                />
+                <Temporizador :pode-iniciar="tarefa.trim().length > 0" @tempo-finalizado="finalizarTarefa"
+                    @tentativa-inicio-invalida="campoInvalido = true" />
             </div>
         </div>
     </div>
 </template>
+
+<style>
+.formulario {
+    background-color: var(--bg-primario);
+    color: var(--texto-primario);
+}
+</style>
