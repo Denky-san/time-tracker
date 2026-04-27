@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Cronometro from './Cronometro.vue';
+import type ITarefa from '../interfaces/ITarefa';
 
 let props = defineProps({
     tarefa: {
@@ -9,6 +10,10 @@ let props = defineProps({
     tempoEmSegundos: {
         type: Number,
         required: true
+    },
+    projeto: {
+        type: String,
+        required: false
     }
 });
 </script>
@@ -16,10 +21,14 @@ let props = defineProps({
 <template>
     <div class="box has-text-weight-bold">
         <div class="columns">
-            <div class="column is-7">
+            <div class="column is-4">
                 {{ props.tarefa }}
             </div>
-            <div class="column">
+            <div class="column is-3">
+                {{ props.projeto }}
+            </div>
+            <div class="column is-flex is-align-items-center" style="gap: 0.4rem;">
+                <font-awesome-icon icon="clock" />
                 <Cronometro :tempo-em-segundos="props.tempoEmSegundos" />
             </div>
         </div>

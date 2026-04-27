@@ -2,7 +2,7 @@
 import { ref } from 'vue';
 import BarraLateral from './components/BarraLateral.vue';
 
-let modoEscuro = ref(true);
+let modoEscuro = ref(false);
 
 </script>
 

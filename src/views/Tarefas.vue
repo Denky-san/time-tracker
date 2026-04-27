@@ -16,7 +16,7 @@ function adicionarTarefa(tarefa: ITarefa) {
     <Formulario @tarefa-criada="adicionarTarefa" />
     <div class="lista">
         <Tarefa v-for="tarefa in tarefas" :key="tarefa.descricao" :tarefa="tarefa.descricao"
-            :tempo-em-segundos="tarefa.duracaoEmSegundos" />
+            :tempo-em-segundos="tarefa.duracaoEmSegundos" :projeto="tarefa.projeto?.nome" />
     </div>
 </template>
 
