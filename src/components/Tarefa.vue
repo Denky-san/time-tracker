@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import Cronometro from './Cronometro.vue';
-import type ITarefa from '../interfaces/ITarefa';
 
 let props = defineProps({
     tarefa: {

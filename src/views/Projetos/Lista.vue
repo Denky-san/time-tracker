@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { useStore } from '@/store';
-import { EXCLUIR_PROJETO } from '@/store/tipoMutacoes';
+import { CONSULTAR_PROJETOS, REMOVER_PROJETO } from '@/store/tipoAcoes';
 
 const store = useStore();
+store.dispatch(CONSULTAR_PROJETOS)
 const projetos = computed(() => store.state.projetos); 
 </script>
 
@@ -32,7 +33,7 @@ const projetos = computed(() => store.state.projetos);
                             <font-awesome-icon icon="edit" class="icon" />
                         </router-link>
                         <button class="button ml-2 is-danger is-small"
-                            @click="store.commit(EXCLUIR_PROJETO, projeto.id)">
+                            @click="store.dispatch(REMOVER_PROJETO, projeto.id)">
                             <font-awesome-icon icon="trash" class="icon" />
                         </button>
                     </td>

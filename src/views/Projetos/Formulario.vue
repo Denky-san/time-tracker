@@ -2,7 +2,7 @@
 import { onMounted, ref } from 'vue';
 import { useRouter } from 'vue-router';
 import { useStore } from '@/store';
-import { EDITA_PROJETO, ADICIONA_PROJETO } from '@/store/tipoMutacoes';
+import { ADICIONAR_PROJETO, ALTERAR_PROJETO } from '../../store/tipoAcoes';
 
 let nomeDoProjeto = ref('');
 
@@ -32,13 +32,20 @@ function salvar() {
     }
 
     if (props.id) {
-        store.commit(EDITA_PROJETO, { id: props.id, nome: nomeDoProjeto.value });
+        store.dispatch(ALTERAR_PROJETO, { id: props.id, nome: nomeDoProjeto.value }).then(() => {
+            nomeDoProjeto.value = '';
+            router.push('/projetos');
+        }).catch(() => {
+            alert('Erro ao alterar projeto.');
+        });
     } else {
-        store.commit(ADICIONA_PROJETO, nomeDoProjeto.value);
+        store.dispatch(ADICIONAR_PROJETO, nomeDoProjeto.value).then(() => {
+            nomeDoProjeto.value = '';
+            router.push('/projetos');
+        }).catch(() => {
+            alert('Erro ao criar projeto.');
+        });
     }
-    nomeDoProjeto.value = '';
-
-    router.push('/projetos');
 }
 </script>
 
