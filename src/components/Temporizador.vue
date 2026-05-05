@@ -40,7 +40,7 @@ function finalizar() {
 <template>
     <div class="is-flex is-align-items-center is-justify-content-space-between">
         <Cronometro :tempoEmSegundos="tempoEmSegundos" />
-        <Botao :icone="'fa-solid fa-play'" :texto="'play'" :cronometroRodando="cronometroRodando" @click="iniciar" />
-        <Botao :icone="'fa-solid fa-stop'" :texto="'stop'" :cronometroRodando="!cronometroRodando" @click="finalizar" />
+        <Botao :icone="['fas', 'play']" :texto="'play'" :cronometroRodando="cronometroRodando" @click="iniciar" />
+        <Botao :icone="['fas', 'stop']" :texto="'stop'" :cronometroRodando="!cronometroRodando" @click="finalizar" />
     </div>
 </template>

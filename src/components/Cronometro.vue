@@ -12,7 +12,8 @@ function tempoDecorrido() {
 </script>
 
 <template>
-    <section>
+    <section class="is-flex is-align-items-center" style="gap: 0.4rem;">
+        <font-awesome-icon :icon="['fas', 'clock']" />
         <strong class="display">{{ tempoDecorrido() }}</strong>
     </section>
 </template>

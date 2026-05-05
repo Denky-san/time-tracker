@@ -15,7 +15,7 @@ let props = defineProps({
 
 onMounted(() => {
     if (props.id) {
-        const projeto = store.state.projetos.find((p: any) => p.id === props.id);
+        const projeto = store.state.projeto.projetos.find((p: any) => p.id === props.id);
         if (projeto) {
             nomeDoProjeto.value = projeto.nome;
         } else {

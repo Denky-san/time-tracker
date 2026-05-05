@@ -10,7 +10,7 @@ let idProjeto = ref('');
 let campoInvalido = ref(false);
 const store = useStore(key);
 
-const projetos = computed(() => store.state.projetos);
+const projetos = computed(() => store.state.projeto.projetos);
 
 const emit = defineEmits(['TarefaCriada']);
 

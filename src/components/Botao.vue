@@ -2,9 +2,8 @@
 
 let props = defineProps({
     icone: {
-        type: String,
+        type: Array as () => string[],
         required: true,
-        default: ''
     },
     cronometroRodando: {
         type: Boolean,

@@ -9,18 +9,18 @@
 
         <nav class="sidebar__nav">
             <router-link to="/" class="sidebar__link">
-                <font-awesome-icon icon="list-check" class="sidebar__icon" />
+                <font-awesome-icon :icon="['fas', 'list-check']" class="sidebar__icon" />
                 <span>Tarefas</span>
             </router-link>
             <router-link to="/projetos" class="sidebar__link">
-                <font-awesome-icon icon="diagram-project" class="sidebar__icon" />
+                <font-awesome-icon :icon="['fas', 'diagram-project']" class="sidebar__icon" />
                 <span>Projetos</span>
             </router-link>
         </nav>
 
         <div class="sidebar__footer">
             <button class="sidebar__theme-btn" @click="$emit('alternar-tema')">
-                <font-awesome-icon icon="circle-half-stroke" />
+                <font-awesome-icon :icon="['fas', 'circle-half-stroke']" />
                 <span>Alternar Tema</span>
             </button>
         </div>

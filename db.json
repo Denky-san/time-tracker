@@ -2,7 +2,85 @@
   "projetos": [
     {
       "id": "BpGBDQzGNNg",
-      "nome": "ghjfghj"
+      "nome": "teste"
+    },
+    {
+      "id": "7davULfMJRc",
+      "nome": "Alura Tracker 3.0"
+    }
+  ],
+  "tarefas": [
+    {
+      "id": "1",
+      "descricao": "Tarefa 1",
+      "duracaoEmSegundos": 1200,
+      "projeto": {
+        "id": "BpGBDQzGNNg",
+        "nome": "teste"
+      }
+    },
+    {
+      "id": "2",
+      "descricao": "Tarefa 22",
+      "duracaoEmSegundos": 3600,
+      "projeto": {
+        "id": "BpGBDQzGNNg",
+        "nome": "teste"
+      }
+    },
+    {
+      "descricao": "oi lucas",
+      "duracaoEmSegundos": 1,
+      "projeto": {
+        "id": "BpGBDQzGNNg",
+        "nome": "teste"
+      },
+      "id": "gppu_Ne92Kg"
+    },
+    {
+      "descricao": "ola",
+      "duracaoEmSegundos": 5,
+      "projeto": {
+        "id": "BpGBDQzGNNg",
+        "nome": "teste"
+      },
+      "id": "2g9mb1TSutg"
+    },
+    {
+      "descricao": "salveewdsdf",
+      "duracaoEmSegundos": 4,
+      "projeto": {
+        "id": "BpGBDQzGNNg",
+        "nome": "teste"
+      },
+      "id": "WJKMXOKszmk"
+    },
+    {
+      "descricao": "lalal",
+      "duracaoEmSegundos": 3,
+      "projeto": {
+        "id": "BpGBDQzGNNg",
+        "nome": "teste"
+      },
+      "id": "27MFLiVCYy8"
+    },
+    {
+      "descricao": "oi sdt",
+      "duracaoEmSegundos": 1,
+      "projeto": {
+        "id": "BpGBDQzGNNg",
+        "nome": "teste"
+      },
+      "id": "iqic5NlA6ZA"
+    },
+    {
+      "descricao": "bla bla",
+      "duracaoEmSegundos": 1,
+      "projeto": {
+        "id": "7davULfMJRc",
+        "nome": "Alura Tracker 3.0"
+      },
+      "id": "SG-lq22aC-w"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
