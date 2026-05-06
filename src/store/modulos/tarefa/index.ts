@@ -40,7 +40,7 @@ export const tarefa: Module<EstadoTarefa, Estado> = {
       let url = "/tarefas";
 
       if (filtro) {
-        url += "?descricao" + filtro;
+        url += "?descricao=" + filtro;
       }
 
       api

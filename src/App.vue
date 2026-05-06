@@ -21,7 +21,9 @@ let modoEscuro = ref(false);
 <style scoped>
 main {
   --bg-primario: var(--branco);
-  --texto-primario: var(--preto)
+  --texto-primario: var(--preto);
+  height: 100vh;
+  overflow: hidden;
 }
 
 main.modo-escuro {
@@ -32,5 +34,7 @@ main.modo-escuro {
 .conteudo {
   background-color: var(--bg-primario);
   color: var(--texto-primario);
+  height: 100vh;
+  overflow-y: auto;
 }
 </style>
