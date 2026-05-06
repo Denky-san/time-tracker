@@ -4,3 +4,8 @@
     --cinza-claro: #ddd;
     --cinza-escuro: #2b2d42;
 }
+
+html, body {
+    overflow: hidden;
+    height: 100%;
+}
